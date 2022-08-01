@@ -60,7 +60,7 @@ npm run serve
 
 ## 配置项props
     功能：让组件接收外部传过来的数据
-	注意：接收到的数据（包括属性和方法）最终都会出现在组件实例对象vc上
+    注意：接收到的数据（包括属性和方法）最终都会出现在组件实例对象vc上
     (1)传递数据：
         <Demo name="xxx" />
     (2)接收数据：
@@ -101,23 +101,23 @@ npm run serve
     功能：用于增强Vue
     本质：包含install方法的一个对象，install的第一个参数是Vue，第二个及以后的参数是插件使用者传递的数据
     定义插件：
-		export default {
-			// param1、param2...是Vue.use()传递的自定义参数（从第二个开始，第一个是引入的插件）
-			install(Vue[, param1][, param2][...]){
-				// 1. 添加全局过滤器
-				Vue.filter(...)
-				// 2 添加全局指令
-				Vue.directive(...)
-				// 3 配置全局混入（合）
-				Vue.mixin(...)
-				// 4 添加实例方法
-				Vue.prototype.$myMethod = function(){...}
-				Vue.prototype.$myProperty = xxx
-			}
-		}
+    	export default {
+    		// param1、param2...是Vue.use()传递的自定义参数（从第二个开始，第一个是引入的插件）
+    		install(Vue[, param1][, param2][...]){
+    			// 1. 添加全局过滤器
+    			Vue.filter(...)
+    			// 2 添加全局指令
+    			Vue.directive(...)
+    			// 3 配置全局混入（合）
+    			Vue.mixin(...)
+    			// 4 添加实例方法
+    			Vue.prototype.$myMethod = function(){...}
+    			Vue.prototype.$myProperty = xxx
+    		}
+    	}
     使用插件：
-		import xxx from ...
-		Vue.use(xxx) // 还可以传递其他自定义参数
+    	import xxx from ...
+    	Vue.use(xxx) // 还可以传递其他自定义参数
 
 ## scoped样式
     作用：让样式在局部生效，防止冲突
@@ -231,7 +231,7 @@ new Vue({
 
 2. 图示：
 
-    ![image-20220515224917564](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20220515224917564.png)
+    ![img_1](../../images/img_1.png)
 
 3. 写法：
     1. 准备好样式

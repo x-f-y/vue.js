@@ -168,11 +168,11 @@ setup(){
   <div style="overflow:hidden;">
     <div style="border:1px solid black;width:400px;height:985px;float:left;margin-right:20px;">
       <strong>vue2.x的生命周期</strong>
-      <img src="https://cn.vuejs.org/images/lifecycle.png" alt="lifecycle_2" style="zoom:33%;width:100%" />
+      <img src="../../images/img_2.png" alt="lifecycle_2" style="zoom:33%;width:100%" />
     </div>
     <div style="border:1px solid black;width:510px;height:985px;float:left;">
       <strong>vue3.0的生命周期</strong>
-      <img src="https://v3.cn.vuejs.org/images/lifecycle.svg" alt="lifecycle_2" style="zoom:33%;width:2500px" />
+      <img src="../../images/img_3.png" alt="lifecycle_2" style="zoom:33%;width:2500px" />
     </div>
   </div>
 - Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但有两个被更名：
@@ -263,7 +263,7 @@ import {customRef} from 'vue'
 ```
 
 ## provide与inject
-<img src="https://v3.cn.vuejs.org/images/components_provide.png" style="width:300px" />
+<img src="../../images/img_4.png" style="width:300px" />
 
 - 作用：实现祖与后代组件间通信
 - 套路：祖组件有一个`provide`选项来提供数据，后代组件有一个`inject`选项来接收这些数据
@@ -298,20 +298,22 @@ import {customRef} from 'vue'
 ## Options API 存在的问题
 使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data，methods，computed里修改
 <div style="width:600px;height:370px;overflow:hidden;float:left">
-  <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84e4e2c02424d9a99862ade0a2e4114~tplv-k3u1fbpfcp-watermark.image" style="width:600px;float:left" />
+  <img src="../../images/img_5.image" style="width:600px;float:left" />
 </div>
 <div style="width:300px;height:370px;overflow:hidden;float:left">
-  <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image" style="zoom:50%;width:560px;left" /> 
+  <img src="../../images/img_6.image" style="zoom:50%;width:560px;left" /> 
 </div>
+
 
 ## Composition API 的优势
 我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起
 <div style="width:500px;height:340px;overflow:hidden;float:left">
-  <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc0be8211fc54b6c941c036791ba4efe~tplv-k3u1fbpfcp-watermark.image"style="height:360px"/>
+  <img src="../../images/img_7.image"style="height:360px"/>
 </div>
 <div style="width:430px;height:340px;overflow:hidden;float:left">
-  <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image"style="height:360px"/>
+  <img src="../../images/img_8.image"style="height:360px"/>
 </div>
+
 
 # 新的组件
 ## Fragment
