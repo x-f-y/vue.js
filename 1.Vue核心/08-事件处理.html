@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../tools/vue.js"></script>
+    <!-- 
+        事件的基本使用
+            - 使用v-on:xxx或@xxx绑定事件，其中xxx是事件名
+            - 事件的回调需要配置在methods对象中，最终会在vm上
+            - methods中配置的函数，不要用箭头函数，否则this就不是vm了
+            - methods中配置的函数，都是被Vue所管理的函数，this的指向是vm或组件实例对象
+            - @click="fun"和@click="fun($event)"效果一样，但后者可以传参
+        事件传参
+            - @事件名 = funName --> 不传参,可以获取到事件对象event
+            - @事件名 = funName(参数1, 参数2, ...) --> 传参,可以获取到传递的参数,但不可以获取到事件对象event
+            - @事件名 = funName($event, 参数1, 参数2, ...) --> 传参,可以获取到传递的参数,也可以获取到事件对象event
+     -->
+</head>
+
+<body>
+    <div id="root">
+        <h1>欢迎来到{{name}}</h1>
+        <!-- 为button绑定点击事件 普通写法 -->
+        <button v-on:click="showInfo">点我提示信息</button>
+        <!-- 简单写法 -->
+        <button @click="showInfo1">点我提示信息1不(传参)</button>
+        <button @click="showInfo2($event,666,888)">点我提示信息2(传参)</button>
+    </div>
+    <script>
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el: '#root',
+            data: {
+                name: 'Vue.js'
+            },
+            methods: {
+                showInfo(event) {
+                    console.log(this) // 这里的this是vm（Vue实例对象）
+                    console.log(event.target.innerText)
+                },
+                showInfo1() {
+                    alert('同学你好!')
+                },
+                showInfo2(event, number1, number2) {
+                    console.log(event, number1, number2)
+                    alert('同学你好!!')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
